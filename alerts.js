@@ -1,1 +1,6 @@
-alert("An javascript alert has appeared!");
+"use strict";
+
+let JSAlert;
+JSAlert = "An javascript alert has appeared!";
+
+alert(JSAlert);
