@@ -1,3 +1,4 @@
+"use strict";
 // Server Specification.
 const serverOS = "Ubuntu 24.04 LTS";
 const serverProcessor = "Ampere Altra";
