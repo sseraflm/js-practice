@@ -29,3 +29,22 @@ let thisIsAnBoolean = true;
 console.log("The type of this variable is an:", typeof thisIsAnString);
 console.log("The type of this variable is an:", typeof thisIsAnNumber);
 console.log("The type of this variable is an:", typeof thisIsAnBoolean);
+
+// Interaction.
+
+let nameResult = prompt("What is your name?", "");
+let yearResult = prompt("What year were you born in?", "");
+
+alert(`Hello ${nameResult} you were born in the year ${yearResult}`);
+
+// Type Conversion Trap
+
+let numberOne = prompt("Input the first number.", "");
+let numberTwo = prompt("Input the second number.", "");
+
+alert(`Adding your number without conversion gives: ${numberOne + numberTwo}`);
+
+numberOne = Number(numberOne);
+numberTwo = Number(numberTwo);
+
+alert(`Adding your number with conversion gives: ${numberOne + numberTwo}`);
