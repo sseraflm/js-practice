@@ -96,3 +96,26 @@ adoNumber = String(adoNumber);
 
 console.log(typeof adoNumber); // Now it will show a String.
 ```
+
+### Basic operators.
+
+`+` is addition.
+`-` is subtraction.
+`*` is multiplication.
+`/` is division.
+`%` is Remainder.
+`**` is exponentiation.
+
+### Incrementation.
+
+`++` Increases the value by 1.
+`--` Decreases the value by 1.
+`+=` Adds a value to the variable. Example: `x += 2` is `x = x + 2`
+`-=` Subtracts a value from the variable. Example: `x -= 2` is `x = x - 2`
+
+### Comparison.
+
+`==` checks for equality ( it performs type conversion. )
+`===` checks for strict equality. (it doesnt perfom type conversion. it compares value and type.)
+
+`>`, `<`, `>=`, `<=` these are used for relational comparisions.
