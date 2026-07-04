@@ -30,21 +30,34 @@ console.log("The type of this variable is an:", typeof thisIsAnString);
 console.log("The type of this variable is an:", typeof thisIsAnNumber);
 console.log("The type of this variable is an:", typeof thisIsAnBoolean);
 
-// Interaction.
+// // Interaction.
 
-let nameResult = prompt("What is your name?", "");
-let yearResult = prompt("What year were you born in?", "");
+// let nameResult = prompt("What is your name?", "");
+// let yearResult = prompt("What year were you born in?", "");
 
-alert(`Hello ${nameResult} you were born in the year ${yearResult}`);
+// alert(`Hello ${nameResult} you were born in the year ${yearResult}`);
 
-// Type Conversion Trap
+// // Type Conversion Trap
 
-let numberOne = prompt("Input the first number.", "");
-let numberTwo = prompt("Input the second number.", "");
+// let numberOne = prompt("Input the first number.", "");
+// let numberTwo = prompt("Input the second number.", "");
 
-alert(`Adding your number without conversion gives: ${numberOne + numberTwo}`);
+// alert(`Adding your number without conversion gives: ${numberOne + numberTwo}`);
 
-numberOne = Number(numberOne);
-numberTwo = Number(numberTwo);
+// numberOne = Number(numberOne);
+// numberTwo = Number(numberTwo);
 
-alert(`Adding your number with conversion gives: ${numberOne + numberTwo}`);
+// alert(`Adding your number with conversion gives: ${numberOne + numberTwo}`);
+
+// Modulo Tester
+
+const firstNumber = 2;
+const secondNumber = 2;
+
+let correctRemainder = firstNumber % secondNumber;
+
+let userAnswer = prompt("What will 2 % 2 give you?", "");
+
+userAnswer = Number(userAnswer);
+
+alert(correctRemainder === userAnswer);
