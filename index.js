@@ -30,7 +30,7 @@ console.log("The type of this variable is an:", typeof thisIsAnString);
 console.log("The type of this variable is an:", typeof thisIsAnNumber);
 console.log("The type of this variable is an:", typeof thisIsAnBoolean);
 
-// // Interaction.
+// Interaction.
 
 let nameResult = prompt("What is your name?", "");
 let yearResult = prompt("What year were you born in?", "");
@@ -71,3 +71,15 @@ adoCount++;
 adoCount += 2;
 
 console.log(adoCount);
+
+// Concert entrance.
+
+let adoTicket = confirm("Do you have a ticket?");
+let vipAdoTicket = confirm("Do you have a vip ticket?");
+let hasId = confirm("Do you have an ID with you?");
+
+if ((adoTicket || vipAdoTicket) && hasId) {
+  alert("You can enter Ado's concert!");
+} else {
+  alert("You can't enter Ado's concert :(");
+}
