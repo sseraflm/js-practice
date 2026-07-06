@@ -13,15 +13,15 @@ alert("any text you want!");
 or like this:
 
 ```javascript
-const JSAlert = "An javascript alert has appeared!";
-alert(JSAlert);
+const jsAlert = "An javascript alert has appeared!";
+alert(jsAlert);
 
 // or you can use
 
-let JSAlert;
-JSAlert = "An javascript alert has appeared!";
+let jsAlert;
+jsAlert = "An javascript alert has appeared!";
 
-alert(JSAlert);
+alert(jsAlert);
 ```
 
 ### Variables and Constants.
@@ -119,3 +119,41 @@ console.log(typeof adoNumber); // Now it will show a String.
 `===` checks for strict equality. (it doesnt perfom type conversion. it compares value and type.)
 
 `>`, `<`, `>=`, `<=` these are used for relational comparisions.
+
+### Conditional statements.
+
+`if` If the statement is true executes code inside the block.
+
+it works like this.
+
+```javascript
+let adoFan = confirm("Are you ado's fan?");
+
+if (adoFan) {
+  alert("You are an ado fan!");
+}
+```
+
+`else` provides an alternative block of code that will run if the `if` condition is false
+
+this is how it would look added to an if.
+
+```javascript
+let adoFan = confirm("Are you Ado's fan?");
+
+if (adoFan) {
+  alert("You are Ado's fan!");
+} else {
+  alert("Go listen to some Ado then.");
+}
+```
+
+### Logical operators.
+
+There are four logical operators in js.
+
+`||` which is OR. It is used to check multiple conditions. It will return `true` if at least one condition is `true`.
+
+`&&` which is AND. It checks multiple conditions and returns `true` only when all the conditions are `true`.
+
+`!` which is NOT. It is used to reverse a boolean value, meaning if something is `true`, it will become `false`.
