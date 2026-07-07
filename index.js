@@ -83,3 +83,12 @@ if ((adoTicket || vipAdoTicket) && hasId) {
 } else {
   alert("You can't enter Ado's concert :(");
 }
+
+// Current theme.
+
+let userTheme = null;
+
+const defaultTheme = "darkBlue";
+
+let currentTheme = userTheme ?? defaultTheme;
+console.log(`You are currently using ${currentTheme} motive!`);
