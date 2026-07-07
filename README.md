@@ -134,7 +134,7 @@ if (adoFan) {
 }
 ```
 
-`else` provides an alternative block of code that will run if the `if` condition is false
+`else` provides an alternative block of code that will run if the `if` condition is false.
 
 this is how it would look added to an if.
 
@@ -150,10 +150,14 @@ if (adoFan) {
 
 ### Logical operators.
 
-There are four logical operators in js.
+There are four logical operators in JS.
 
 `||` which is OR. It is used to check multiple conditions. It will return `true` if at least one condition is `true`.
 
 `&&` which is AND. It checks multiple conditions and returns `true` only when all the conditions are `true`.
 
 `!` which is NOT. It is used to reverse a boolean value, meaning if something is `true`, it will become `false`.
+
+`??` which is the nullish coalescing operator. It will return the value on the right side only if the value on the left side is either `null` or `undefined`
+
+Unlike `||`, the `??` operator does not treat `0`, `false` or an empty string as a missing value.
