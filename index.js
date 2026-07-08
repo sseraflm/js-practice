@@ -92,3 +92,16 @@ const defaultTheme = "darkBlue";
 
 let currentTheme = userTheme ?? defaultTheme;
 console.log(`You are currently using ${currentTheme} motive!`);
+
+// count loop.
+
+for (let countAdo = 0; countAdo < 11; countAdo++) {
+  console.log(countAdo);
+}
+
+for (let evenAdo = 0; evenAdo < 20; evenAdo++) {
+  if (evenAdo % 2 === 0) {
+    console.log(evenAdo);
+  }
+}
+
