@@ -161,3 +161,43 @@ There are four logical operators in JS.
 `??` which is the nullish coalescing operator. It will return the value on the right side only if the value on the left side is either `null` or `undefined`
 
 Unlike `||`, the `??` operator does not treat `0`, `false` or an empty string as a missing value.
+
+### Loops.
+
+We can use loops when we want to repeat code multiple times.
+
+`while` repeats code as long as the condition is `true`
+
+Here is an example.
+
+```javascript
+let ado = 0;
+
+while (ado < 5) {
+  console.log(ado);
+  ado++;
+}
+```
+
+`do...while` works like `while`, except it runs the code at least once before checking the condition.
+
+```javascript
+let ado = 0;
+
+do {
+  console.log(ado);
+  ado++;
+} while (ado < 5);
+```
+
+`for` is used when we know how many times we want to repeat something.
+
+It has three parts: `begin;` `condition;` and `step`.
+
+It works like this.
+
+```javascript
+for (let ado = 0; ado < 22; ado++) {
+  console.log(ado);
+}
+```
