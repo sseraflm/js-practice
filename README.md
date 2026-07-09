@@ -201,3 +201,13 @@ for (let ado = 0; ado < 22; ado++) {
   console.log(ado);
 }
 ```
+
+### Switch statement.
+
+a `switch` statement can replace many `if` checks.
+
+It is very useful when we want to compare one value against many cases.
+
+It uses `case` and `break`.
+
+`default` is executed if none of the cases match.
