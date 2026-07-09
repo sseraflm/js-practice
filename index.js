@@ -105,3 +105,19 @@ for (let evenAdo = 0; evenAdo < 20; evenAdo++) {
   }
 }
 
+// Ado concert ticket checker.
+let adoTicket = prompt("What ticket do you have? (normal, vip, backstage)", "");
+
+switch (adoTicket) {
+  case "normal":
+    alert("Head to the normal section of the stadium.");
+    break;
+  case "vip":
+    alert("Head to the vip section of the stadium.");
+    break;
+  case "backstage":
+    alert("Head to the backstage section of the stadium.");
+    break;
+  default:
+    alert("Unknown ticket type.");
+}
