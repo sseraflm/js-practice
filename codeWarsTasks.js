@@ -52,10 +52,22 @@ function opposite(number) {
   if (number > 0) {
     return -number;
   } else {
-    return (number * -1);
+    return number * -1;
   }
 }
 // Simpler solution
 function opposite(number) {
   return -number;
 }
+
+// Convert a Number to a String!
+function numberToString(num) {
+  num = String(num);
+  return num;
+}
+
+// Convert a String to a Number!
+const stringToNumber = function (str) {
+  str = Number(str);
+  return str;
+};
