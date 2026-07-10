@@ -121,3 +121,32 @@ switch (adoTicket) {
   default:
     alert("Unknown ticket type.");
 }
+
+// Prompt calculator.
+
+let value1 = prompt("Choose the first number.", "");
+let value2 = prompt("Choose the second number.", "");
+let operation = prompt("Choose the operation you wish to do.", "");
+
+value1 = Number(value1);
+value2 = Number(value2);
+
+switch (operation) {
+  case "+":
+    alert(value1 + value2);
+    break;
+
+  case "-":
+    alert(value1 - value2);
+    break;
+
+  case "*":
+    alert(value1 * value2);
+    break;
+
+  case "/":
+    alert(value1 / value2);
+    break;
+  default:
+    alert("Unkown Operation");
+}
