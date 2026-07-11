@@ -80,3 +80,19 @@ var summation = function (num) {
   }
   return sum;
 };
+// Grasshopper – Personalized Message
+function greet(name, owner) {
+  if (name === owner) {
+    return "Hello boss";
+  } else {
+    return "Hello guest";
+  }
+}
+// Will you make it?
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  if (fuelLeft * mpg >= distanceToPump) {
+    return true;
+  } else {
+    return false;
+  }
+};
