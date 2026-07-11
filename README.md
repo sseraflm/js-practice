@@ -13,15 +13,15 @@ alert("any text you want!");
 or like this:
 
 ```javascript
-const JSAlert = "An javascript alert has appeared!";
-alert(JSAlert);
+const jsAlert = "An javascript alert has appeared!";
+alert(jsAlert);
 
 // or you can use
 
-let JSAlert;
-JSAlert = "An javascript alert has appeared!";
+let jsAlert;
+jsAlert = "An javascript alert has appeared!";
 
-alert(JSAlert);
+alert(jsAlert);
 ```
 
 ### Variables and Constants.
@@ -119,3 +119,95 @@ console.log(typeof adoNumber); // Now it will show a String.
 `===` checks for strict equality. (it doesnt perfom type conversion. it compares value and type.)
 
 `>`, `<`, `>=`, `<=` these are used for relational comparisions.
+
+### Conditional statements.
+
+`if` If the statement is true executes code inside the block.
+
+it works like this.
+
+```javascript
+let adoFan = confirm("Are you ado's fan?");
+
+if (adoFan) {
+  alert("You are an ado fan!");
+}
+```
+
+`else` provides an alternative block of code that will run if the `if` condition is false.
+
+this is how it would look added to an if.
+
+```javascript
+let adoFan = confirm("Are you Ado's fan?");
+
+if (adoFan) {
+  alert("You are Ado's fan!");
+} else {
+  alert("Go listen to some Ado then.");
+}
+```
+
+### Logical operators.
+
+There are four logical operators in JS.
+
+`||` which is OR. It is used to check multiple conditions. It will return `true` if at least one condition is `true`.
+
+`&&` which is AND. It checks multiple conditions and returns `true` only when all the conditions are `true`.
+
+`!` which is NOT. It is used to reverse a boolean value, meaning if something is `true`, it will become `false`.
+
+`??` which is the nullish coalescing operator. It will return the value on the right side only if the value on the left side is either `null` or `undefined`
+
+Unlike `||`, the `??` operator does not treat `0`, `false` or an empty string as a missing value.
+
+### Loops.
+
+We can use loops when we want to repeat code multiple times.
+
+`while` repeats code as long as the condition is `true`
+
+Here is an example.
+
+```javascript
+let ado = 0;
+
+while (ado < 5) {
+  console.log(ado);
+  ado++;
+}
+```
+
+`do...while` works like `while`, except it runs the code at least once before checking the condition.
+
+```javascript
+let ado = 0;
+
+do {
+  console.log(ado);
+  ado++;
+} while (ado < 5);
+```
+
+`for` is used when we know how many times we want to repeat something.
+
+It has three parts: `begin;` `condition;` and `step`.
+
+It works like this.
+
+```javascript
+for (let ado = 0; ado < 22; ado++) {
+  console.log(ado);
+}
+```
+
+### Switch statement.
+
+a `switch` statement can replace many `if` checks.
+
+It is very useful when we want to compare one value against many cases.
+
+It uses `case` and `break`.
+
+`default` is executed if none of the cases match.

@@ -30,7 +30,7 @@ console.log("The type of this variable is an:", typeof thisIsAnString);
 console.log("The type of this variable is an:", typeof thisIsAnNumber);
 console.log("The type of this variable is an:", typeof thisIsAnBoolean);
 
-// // Interaction.
+// Interaction.
 
 let nameResult = prompt("What is your name?", "");
 let yearResult = prompt("What year were you born in?", "");
@@ -71,3 +71,96 @@ adoCount++;
 adoCount += 2;
 
 console.log(adoCount);
+
+// Concert entrance.
+
+let adoTicket = confirm("Do you have a ticket?");
+let vipAdoTicket = confirm("Do you have a vip ticket?");
+let hasId = confirm("Do you have an ID with you?");
+
+if ((adoTicket || vipAdoTicket) && hasId) {
+  alert("You can enter Ado's concert!");
+} else {
+  alert("You can't enter Ado's concert :(");
+}
+
+// Current theme.
+
+let userTheme = null;
+
+const defaultTheme = "darkBlue";
+
+let currentTheme = userTheme ?? defaultTheme;
+console.log(`You are currently using ${currentTheme} motive!`);
+
+// count loop.
+
+for (let countAdo = 0; countAdo < 11; countAdo++) {
+  console.log(countAdo);
+}
+
+for (let evenAdo = 0; evenAdo < 20; evenAdo++) {
+  if (evenAdo % 2 === 0) {
+    console.log(evenAdo);
+  }
+}
+
+// Ado concert ticket checker.
+let adoTicket = prompt("What ticket do you have? (normal, vip, backstage)", "");
+
+switch (adoTicket) {
+  case "normal":
+    alert("Head to the normal section of the stadium.");
+    break;
+  case "vip":
+    alert("Head to the vip section of the stadium.");
+    break;
+  case "backstage":
+    alert("Head to the backstage section of the stadium.");
+    break;
+  default:
+    alert("Unknown ticket type.");
+}
+
+// Prompt calculator.
+
+let value1 = prompt("Choose the first number.", "");
+let value2 = prompt("Choose the second number.", "");
+let operation = prompt("Choose the operation you wish to do.", "");
+
+value1 = Number(value1);
+value2 = Number(value2);
+
+switch (operation) {
+  case "+":
+    alert(value1 + value2);
+    break;
+
+  case "-":
+    alert(value1 - value2);
+    break;
+
+  case "*":
+    alert(value1 * value2);
+    break;
+
+  case "/":
+    alert(value1 / value2);
+    break;
+  default:
+    alert("Unkown Operation");
+}
+
+// FizzBuzz
+
+for (let i = 1; i <= 100; ++i) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
