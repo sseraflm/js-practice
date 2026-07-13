@@ -211,3 +211,24 @@ It is very useful when we want to compare one value against many cases.
 It uses `case` and `break`.
 
 `default` is executed if none of the cases match.
+
+### Functions
+
+Functions are used to group code that can be reused multiple times.
+
+A function can have parameters, which can then be used inside its code.
+
+Arguments are the actual values passed when the function is called.
+
+An example:
+
+```javascript
+function welcomeUser(adoName) {
+  let message = "Hello, " + adoName;
+  alert(message);
+}
+
+welcomeUser("Akhuri-Chan");
+```
+
+A parameter can have a default value that will be used if no argument is passed.
