@@ -96,3 +96,12 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     return false;
   }
 };
+// Function 1 – hello world
+function greet() {
+  return "hello world!";
+}
+
+// Returning Strings
+function greet(name){
+  return "Hello, " + name + " how are you doing today?"
+}
