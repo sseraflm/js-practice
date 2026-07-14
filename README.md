@@ -232,3 +232,20 @@ welcomeUser("Akhuri-Chan");
 ```
 
 A parameter can have a default value that will be used if no argument is passed.
+
+### Return
+
+`return` is used to send a value back from a function.
+
+`return` does not display anything. It simply gives back the result, which can be saved into a variable or used somewhere else.
+
+Example:
+
+```javascript
+function adoSum(a, b) {
+  return a + b;
+}
+
+let result = adoSum(2, 2);
+console.log(result);
+```
