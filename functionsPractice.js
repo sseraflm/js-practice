@@ -7,15 +7,6 @@ function welcomeUser(adoName) {
 
 welcomeUser("Akhuri-Chan");
 
-// Function sum of numbers.
-
-function sumOfNumbers(numberOne, numberTwo) {
-  let sum = numberOne + numberTwo;
-  alert(sum);
-}
-
-sumOfNumbers(2, 2);
-
 // Is the number even?
 
 function evenNumber(number) {
@@ -33,3 +24,46 @@ function favorite(numberAdo, favoriteNumber = 2) {
 }
 
 favorite("2");
+
+// sum of numbers.
+
+function sumOfNumbers(numberOne, numberTwo) {
+  return numberOne + numberTwo;
+}
+
+let sumResult = sumOfNumbers(2, 2);
+
+// Subtraction.
+
+function subtractNumbers(a, b) {
+  return a - b;
+}
+
+let subResult = subtractNumbers(2, 2);
+
+// Multiply.
+
+function multiplyNumbers(a, b) {
+  return a * b;
+}
+
+let multResult = multiplyNumbers(2, 2);
+
+// Divide.
+
+function divideNumbers(a, b) {
+  return a / b;
+}
+
+let diviResult = divideNumbers(2, 2);
+
+// Result
+
+function showResult(result) {
+  console.log(`The result is ${result}`);
+}
+
+showResult(sumResult);
+showResult(subResult);
+showResult(multResult);
+showResult(diviResult);
