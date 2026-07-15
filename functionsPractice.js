@@ -67,3 +67,19 @@ showResult(sumResult);
 showResult(subResult);
 showResult(multResult);
 showResult(diviResult);
+
+// Function Expressions
+
+let temp = Number(prompt("What temperature is it?", ""));
+
+const checkTemp = function (temperature) {
+  if (temperature <= 0) {
+    return "freezing";
+  } else {
+    return "above freezing";
+  }
+};
+
+let freezeResult = checkTemp(temp);
+
+alert(freezeResult);
