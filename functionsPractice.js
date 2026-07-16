@@ -83,3 +83,39 @@ const checkTemp = function (temperature) {
 let freezeResult = checkTemp(temp);
 
 alert(freezeResult);
+
+// Ticket price
+
+let age = Number(prompt("What is your age?"));
+
+const ticketPrice = function (a) {
+  if (a < 18) {
+    return "Child ticket";
+  } else if (a >= 18 && a < 65) {
+    return "Adult ticket";
+  } else if (a >= 65) {
+    return "Senior ticket";
+  }
+};
+let ticketResult = ticketPrice(age);
+
+alert(ticketResult);
+
+// Arrow functions.
+
+let add = (a, b) => a + b;
+
+alert(add(1, 2));
+
+//
+
+let isEven = (a) => {
+  let result = a % 2;
+  if (result === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+alert(isEven(2));
