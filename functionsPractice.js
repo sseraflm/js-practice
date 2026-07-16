@@ -101,13 +101,13 @@ let ticketResult = ticketPrice(age);
 
 alert(ticketResult);
 
-// Arrow functions.
+// Arrow functions sum.
 
 let add = (a, b) => a + b;
 
 alert(add(1, 2));
 
-//
+// Arrow functions isEven.
 
 let isEven = (a) => {
   let result = a % 2;
