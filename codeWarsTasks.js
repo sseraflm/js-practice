@@ -115,3 +115,26 @@ function hero(bullets, dragons) {
     return false;
   }
 }
+
+// Grasshopper – Check for factor
+
+function checkForFactor(base, factor) {
+  if (base % factor === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Opposites Attract
+
+function lovefunc(flower1, flower2) {
+  if (
+    (flower1 % 2 === 0 && flower2 % 2 !== 0) ||
+    (flower1 % 2 !== 0 && flower2 % 2 === 0)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
