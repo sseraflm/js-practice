@@ -249,3 +249,41 @@ function adoSum(a, b) {
 let result = adoSum(2, 2);
 console.log(result);
 ```
+
+### Function Expressions
+
+A Function Expression is a function stored inside a variable.
+
+it can be called using the name of the variable.
+
+```javascript
+const checkTemperature = function (temperature) {
+  if (temperature <= 0) {
+    return "Freezing";
+  } else {
+    return "Above freezing";
+  }
+};
+
+let result = checkTemperature(5);
+```
+
+### Arrow Functions
+
+Arrow Functions are a shorter way to write functions stored inside variables.
+
+they use `=>` symbols instead of `function` keyword.
+
+example:
+
+```javascript
+const add = (a, b) => {
+  return a + b;
+};
+```
+
+If an Arrow Function only returns one expression, the brackets and `return` can be removed.
+
+```javascript
+const add = (a, b) => a + b;
+```
