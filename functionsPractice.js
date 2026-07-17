@@ -119,3 +119,19 @@ let isEven = (a) => {
 };
 
 alert(isEven(2));
+
+// isBetween
+
+const isBetween = (number, min, max) => {
+  if (number >= min && number <= max) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+// isAdult
+
+const isAdult = (age) => {
+  return age >= 18;
+};
