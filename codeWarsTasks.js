@@ -96,3 +96,45 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     return false;
   }
 };
+// Function 1 – hello world
+function greet() {
+  return "hello world!";
+}
+
+// Returning Strings
+function greet(name) {
+  return "Hello, " + name + " how are you doing today?";
+}
+
+// Is he gonna survive?
+
+function hero(bullets, dragons) {
+  if (bullets >= dragons * 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Grasshopper – Check for factor
+
+function checkForFactor(base, factor) {
+  if (base % factor === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Opposites Attract
+
+function lovefunc(flower1, flower2) {
+  if (
+    (flower1 % 2 === 0 && flower2 % 2 !== 0) ||
+    (flower1 % 2 !== 0 && flower2 % 2 === 0)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}

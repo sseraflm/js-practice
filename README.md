@@ -211,3 +211,79 @@ It is very useful when we want to compare one value against many cases.
 It uses `case` and `break`.
 
 `default` is executed if none of the cases match.
+
+### Functions
+
+Functions are used to group code that can be reused multiple times.
+
+A function can have parameters, which can then be used inside its code.
+
+Arguments are the actual values passed when the function is called.
+
+An example:
+
+```javascript
+function welcomeUser(adoName) {
+  let message = "Hello, " + adoName;
+  alert(message);
+}
+
+welcomeUser("Akhuri-Chan");
+```
+
+A parameter can have a default value that will be used if no argument is passed.
+
+### Return
+
+`return` is used to send a value back from a function.
+
+`return` does not display anything. It simply gives back the result, which can be saved into a variable or used somewhere else.
+
+Example:
+
+```javascript
+function adoSum(a, b) {
+  return a + b;
+}
+
+let result = adoSum(2, 2);
+console.log(result);
+```
+
+### Function Expressions
+
+A Function Expression is a function stored inside a variable.
+
+it can be called using the name of the variable.
+
+```javascript
+const checkTemperature = function (temperature) {
+  if (temperature <= 0) {
+    return "Freezing";
+  } else {
+    return "Above freezing";
+  }
+};
+
+let result = checkTemperature(5);
+```
+
+### Arrow Functions
+
+Arrow Functions are a shorter way to write functions stored inside variables.
+
+they use `=>` symbols instead of `function` keyword.
+
+example:
+
+```javascript
+const add = (a, b) => {
+  return a + b;
+};
+```
+
+If an Arrow Function only returns one expression, the brackets and `return` can be removed.
+
+```javascript
+const add = (a, b) => a + b;
+```
