@@ -138,3 +138,20 @@ function lovefunc(flower1, flower2) {
     return false;
   }
 }
+
+// Beginner Series #2 Clock
+
+function past(h, m, s) {
+  return h * 3600000 + m * 60000 + s * 1000;
+}
+
+// Will there be enough space?
+
+function enough(cap, on, wait) {
+  const freeSeats = cap - on;
+  if (wait > freeSeats) {
+    return wait - freeSeats;
+  } else {
+    return 0;
+  }
+}
