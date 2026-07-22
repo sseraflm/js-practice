@@ -328,3 +328,14 @@ for (const key in object) {
     // It will execute body for each key in the object.
 }
 ```
+
+### Arrays
+
+An array is used to store multiple values in one variable.
+Every element has an index. which goes up from `0`.
+The `.length` property returns the number of elements in an array.
+
+The `push()` method adds an element to the end of an array.
+The `pop()` method removes an element from the end of an array.
+
+The `for..of` loop can be used to go through all values in an array.
