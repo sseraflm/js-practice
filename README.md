@@ -130,7 +130,7 @@ it works like this.
 let adoFan = confirm("Are you ado's fan?");
 
 if (adoFan) {
-  alert("You are an ado fan!");
+    alert("You are an ado fan!");
 }
 ```
 
@@ -142,9 +142,9 @@ this is how it would look added to an if.
 let adoFan = confirm("Are you Ado's fan?");
 
 if (adoFan) {
-  alert("You are Ado's fan!");
+    alert("You are Ado's fan!");
 } else {
-  alert("Go listen to some Ado then.");
+    alert("Go listen to some Ado then.");
 }
 ```
 
@@ -174,8 +174,8 @@ Here is an example.
 let ado = 0;
 
 while (ado < 5) {
-  console.log(ado);
-  ado++;
+    console.log(ado);
+    ado++;
 }
 ```
 
@@ -185,8 +185,8 @@ while (ado < 5) {
 let ado = 0;
 
 do {
-  console.log(ado);
-  ado++;
+    console.log(ado);
+    ado++;
 } while (ado < 5);
 ```
 
@@ -198,7 +198,7 @@ It works like this.
 
 ```javascript
 for (let ado = 0; ado < 22; ado++) {
-  console.log(ado);
+    console.log(ado);
 }
 ```
 
@@ -224,8 +224,8 @@ An example:
 
 ```javascript
 function welcomeUser(adoName) {
-  let message = "Hello, " + adoName;
-  alert(message);
+    let message = "Hello, " + adoName;
+    alert(message);
 }
 
 welcomeUser("Akhuri-Chan");
@@ -243,7 +243,7 @@ Example:
 
 ```javascript
 function adoSum(a, b) {
-  return a + b;
+    return a + b;
 }
 
 let result = adoSum(2, 2);
@@ -258,11 +258,11 @@ it can be called using the name of the variable.
 
 ```javascript
 const checkTemperature = function (temperature) {
-  if (temperature <= 0) {
-    return "Freezing";
-  } else {
-    return "Above freezing";
-  }
+    if (temperature <= 0) {
+        return "Freezing";
+    } else {
+        return "Above freezing";
+    }
 };
 
 let result = checkTemperature(5);
@@ -278,7 +278,7 @@ example:
 
 ```javascript
 const add = (a, b) => {
-  return a + b;
+    return a + b;
 };
 ```
 
@@ -286,4 +286,45 @@ If an Arrow Function only returns one expression, the brackets and `return` can 
 
 ```javascript
 const add = (a, b) => a + b;
+```
+
+### Objects
+
+Objects are used to store collections of various data and more complex entities.
+
+We can create an object in two common ways.
+
+```javascript
+let user = new Object(); // This is called an "object constructor" syntax
+```
+
+or:
+
+```javascript
+let user = {}; // This is called an "object literal" syntax
+```
+
+Example of an object:
+
+```javascript
+let ado = {
+    name: "Naima",
+    age: 22,
+};
+```
+
+You can delete a property of an object using the `delete` operator:
+
+```javascript
+delete ado.age;
+```
+
+To loop over all the keys in an object, we can use the `for...in` loop.
+
+It works like this:
+
+```javascript
+for (const key in object) {
+    // It will execute body for each key in the object.
+}
 ```
