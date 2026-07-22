@@ -339,3 +339,11 @@ The `push()` method adds an element to the end of an array.
 The `pop()` method removes an element from the end of an array.
 
 The `for..of` loop can be used to go through all values in an array.
+
+### Arrays methods
+
+`map()` creates a new array, changing every element.
+`filter()` creates a new array with only the matching elements.
+`find` returns the first matching element.
+`some()` checks if at least one element fulfills the condition.
+`every()` checks if all the elements fulfill the condition.
