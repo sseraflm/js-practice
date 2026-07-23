@@ -65,3 +65,11 @@ console.log(showSong);
 
 const atleastTen = songs.some(song => song.length > 10);
 console.log(atleastTen);
+
+// Reduce
+
+let sumOfNumbers = numbers.reduce((sum, current) => sum + current, 0);
+
+let productOfNumbers = numbers.reduce((sum, current) => sum * current, 1);
+
+let songsCharacters = songs.reduce((sum, current) => sum + current.length, 0);
