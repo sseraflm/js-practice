@@ -343,8 +343,23 @@ The `for..of` loop can be used to go through all values in an array.
 ### Arrays methods
 
 `map()` creates a new array by changing every element.
+
 `filter()` creates a new array with only the matching elements.
+
 `find` returns the first matching element.
+
 `some()` checks if at least one element fulfills the condition.
+
 `every()` checks if all the elements fulfill the condition.
+
 `reduce()` combines all elements of an array into a single value.
+
+### Destructuring
+
+Destructuring allows you to extract values from arrays and objects and save them into variables.
+
+It can also be used to skip values, set default values, and rename variables.
+
+### Spread syntax
+
+Spread syntax `...` can be used to unpack values and to copy or combine arrays and objects without changing the originals.
