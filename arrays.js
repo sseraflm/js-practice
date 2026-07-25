@@ -69,7 +69,10 @@ console.log(atleastTen);
 // Reduce
 
 let sumOfNumbers = numbers.reduce((sum, current) => sum + current, 0);
+console.log(sumOfNumbers);
 
-let productOfNumbers = numbers.reduce((sum, current) => sum * current, 1);
+let productOfNumbers = numbers.reduce((product, current) => product * current, 1);
+console.log(productOfNumbers);
 
 let songsCharacters = songs.reduce((sum, current) => sum + current.length, 0);
+console.log(songsCharacters);
