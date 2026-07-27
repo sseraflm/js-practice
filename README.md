@@ -363,3 +363,25 @@ It can also be used to skip values, set default values, and rename variables.
 ### Spread syntax
 
 Spread syntax `...` can be used to unpack values and to copy or combine arrays and objects without changing the originals.
+
+## DOM
+
+The DOM represents the HTML document as objects that JavaScript can access and modify.
+
+### Searching for elements
+
+`getElementById()` finds an element by its ID.
+
+`getElementsByName()` returns all elements with the specifed `name` attribute.
+
+`getElementsByClassName()` returns all elements with the specified class.
+
+`querySelector()` returns the first element matching a CSS selector.
+
+`querySelectorAll()` returns all elements matching a CSS selector.
+
+### Changing element content
+
+After finding an element, its text can be changed using `textContent` or `innerText`.
+
+Multiple elements can be accessed using a loop such as `for...of`.
