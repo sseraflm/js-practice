@@ -22,3 +22,36 @@ for (let song of songsList) {
 
 songsList[2].innerText = "soldier game";
 button.innerText = "Japan's national football team.";
+
+let input = document.getElementById("adoInput");
+input.value = "Soldier";
+console.log(input.value);
+
+let link = document.querySelector("a");
+
+console.log(link.href);
+
+link.href = "ado.ado";
+link.textContent = "yes";
+
+let img = document.querySelector("img");
+
+img.alt = "egg2";
+
+img.src = "egg1";
+
+console.log(link.getAttribute("id"));
+link.setAttribute("id", "link2");
+link.setAttribute("link", "adoLink");
+
+console.log(link.attributes);
+console.log(link.getAttribute("Chando")); // null
+console.log(link.className);
+link.className = "ye";
+
+let header2 = document.getElementById("title");
+
+console.log(header2.dataset.userId);
+
+header2.dataset.userId = "yes";
+console.log(header2.dataset.userId);
