@@ -395,3 +395,17 @@ After finding an element, JavaScript can read and change its properties.
 `getAttribute()` is used to get an attribute, while `setAttribute()` is used to add or change one.
 
 `dataset` is used to access custom `data-*` attributes.
+
+### Creating and removing elements
+
+`createElement` creates a new HTML element.
+
+After creating an element, its text and properties can be changed before adding it to the document.
+
+`append()` adds an element at the end of another element.
+
+A loop can be used to create multiple elements from an array.
+
+`children` gives access to an element's child elements.
+
+`remove()` removes an element from the document.
