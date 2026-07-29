@@ -385,3 +385,13 @@ The DOM represents the HTML document as objects that JavaScript can access and m
 After finding an element, its text can be changed using `textContent` or `innerText`.
 
 Multiple elements can be accessed using a loop such as `for...of`.
+
+### Attributes and properties
+
+HTML elements can have attributes such as `id`, `class`, `href`, and `src`.
+
+After finding an element, JavaScript can read and change its properties.
+
+`getAttribute()` is used to get an attribute, while `setAttribute()` is used to add or change one.
+
+`dataset` is used to access custom `data-*` attributes.
