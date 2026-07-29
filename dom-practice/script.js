@@ -55,3 +55,25 @@ console.log(header2.dataset.userId);
 
 header2.dataset.userId = "yes";
 console.log(header2.dataset.userId);
+
+// Modify practice.
+
+let list = document.getElementById("list");
+
+let listElement = document.createElement("li");
+
+listElement.innerHTML = "Vivarium";
+
+listElement.className = "Adocado";
+
+list.append(listElement);
+
+let songs = ["Shoka", "Vivarium", "MIRROR", "Do the dance!"];
+
+for (let song of songs) {
+    let listItem = document.createElement("li");
+    listItem.innerText = song;
+    list.append(listItem);
+}
+
+list.children[2].remove();
