@@ -409,3 +409,17 @@ A loop can be used to create multiple elements from an array.
 `children` gives access to an element's child elements.
 
 `remove()` removes an element from the document.
+
+### Events
+
+Events allow JavaScript to react to actions made by the user.
+
+`addEventListener()` runs a function when a specific event happens.
+
+`classList.toggle()` can be used to add or remove a class.
+
+`classList.add()` adds a class, while `classList.remove()` removes one.
+
+`classList.contains()` checks if an element has a specific class.
+
+Events can be used to change text, hide elements, enable dark mode, and count button clicks, and much more!
