@@ -59,3 +59,48 @@ function changeButton() {
 }
 
 changingButton.addEventListener("click", changeButton);
+
+// Form
+
+let form = document.getElementById("form");
+let result = document.getElementById("result");
+
+function stopEvent(event) {
+    event.preventDefault();
+    let nameInput = document.getElementById("name");
+    if (nameInput.value === "") {
+        let noResult = document.createElement("p");
+        noResult.innerText = "No text in input.";
+        result.append(noResult);
+    } else {
+        let resultP = document.createElement("p");
+        resultP.innerText = nameInput.value;
+        result.append(resultP);
+    }
+}
+
+form.addEventListener("submit", stopEvent);
+
+// Stop Links
+
+let link = document.getElementById("link");
+let checkbox = document.getElementById("allowNav");
+
+function stopLink(event) {
+    if (!checkbox.checked) {
+        event.preventDefault();
+    }
+}
+
+link.addEventListener("click", stopLink);
+
+// Context menu
+
+let basicText = document.getElementById("basicText");
+
+function stopMenu(event) {
+    event.preventDefault();
+    basicText.innerText = "Gyaru";
+}
+
+basicText.addEventListener("contextmenu", stopMenu);
