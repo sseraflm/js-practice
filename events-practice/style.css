@@ -6,3 +6,11 @@
     background-color: black;
     color: white;
 }
+#outerDiv {
+    background-color: gray;
+}
+#mouseMove {
+    height: 360px;
+    background-color: darkblue;
+    width: 360px;
+}
