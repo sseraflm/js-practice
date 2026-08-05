@@ -26,6 +26,38 @@
         <div id="contextmenu">
             <p id="basicText">Adocado</p>
         </div>
+        <!-- Bubbling -->
+        <div id="outerDiv">
+            <div id="innerDiv">
+                <button id="innerButton">Click</button>
+            </div>
+        </div>
+        <!-- Event Delegation-->
+        <ul id="mainList">
+            <li>
+                <p>Chando</p>
+                <button class="delete">Delete</button>
+            </li>
+            <li>
+                <p>Akuhuri</p>
+                <button class="delete">Delete</button>
+            </li>
+            <li>
+                <p>Ado</p>
+                <button class="delete">Delete</button>
+            </li>
+            <li>
+                <p>Merry</p>
+                <button class="delete">Delete</button>
+            </li>
+        </ul>
+        <input type="text" id="liInput" />
+        <button id="newLi">Click me!</button>
+        <!-- Keydown -->
+        <input type="text" id="keydown" />
+        <!--Mouse move-->
+        <div id="mouseMove"></div>
+        <p id="currentCords"></p>
         <script src="script.js"></script>
     </body>
 </html>
