@@ -104,3 +104,70 @@ function stopMenu(event) {
 }
 
 basicText.addEventListener("contextmenu", stopMenu);
+
+// Bubbling
+
+let outerDiv = document.getElementById("outerDiv");
+
+function bubblingAlert(event) {
+    console.log(event.target);
+    console.log(event.currentTarget);
+}
+
+outerDiv.addEventListener("click", bubblingAlert);
+
+// Delegation
+
+let mainList = document.getElementById("mainList");
+let newLiButton = document.getElementById("newLi");
+let liInput = document.getElementById("liInput");
+
+function deleteLi(event) {
+    if (event.target.classList.contains("delete")) {
+        let foundLi = event.target.closest("li");
+        foundLi.remove();
+    }
+}
+function newLi() {
+    let newLi = document.createElement("li");
+    let newP = document.createElement("p");
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete");
+    deleteButton.innerText = "Delete";
+    newP.innerText = liInput.value;
+
+    newLi.append(newP, deleteButton);
+    mainList.append(newLi);
+    liInput.value = "";
+}
+
+mainList.addEventListener("click", deleteLi);
+newLiButton.addEventListener("click", newLi);
+
+// Keydown
+
+let keyInput = document.getElementById("keydown");
+
+function clearInput(event) {
+    if (event.key === "Escape") {
+        keyInput.value = "";
+    } else if (event.key === "Enter") {
+        console.log(keyInput.value);
+        keyInput.value = "";
+    }
+}
+
+keyInput.addEventListener("keydown", clearInput);
+
+// Mouse move
+
+let mouseMoveDiv = document.getElementById("mouseMove");
+let currentCordsP = document.getElementById("currentCords");
+
+function showCords(event) {
+    let xCord = event.clientX;
+    let yCord = event.clientY;
+    currentCordsP.innerText = `X: ${xCord}, Y: ${yCord}`;
+}
+
+mouseMoveDiv.addEventListener("mousemove", showCords);
