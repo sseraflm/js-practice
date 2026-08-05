@@ -423,3 +423,15 @@ Events allow JavaScript to react to actions made by the user.
 `classList.contains()` checks if an element has a specific class.
 
 Events can be used to change text, hide elements, enable dark mode, and count button clicks, and much more!
+
+### Default browser actions
+
+Some HTML elements have default actions provided by the browser.
+
+`event.preventDefault()` stops the browser from perforimg its default action.
+
+The `submit` event is used to handle forms without reloading the page.
+
+The `contextmenu` event can be used to customize the right-click behavior.
+
+Default can also be controlled by using `if` statements.
