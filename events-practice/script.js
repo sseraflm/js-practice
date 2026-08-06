@@ -171,3 +171,76 @@ function showCords(event) {
 }
 
 mouseMoveDiv.addEventListener("mousemove", showCords);
+
+// Class inline
+
+let cardButton = document.getElementById("cardButton");
+let cardDiv = document.getElementById("card");
+
+function changeClass() {
+    if (cardDiv.classList.contains("active")) {
+        cardDiv.classList.remove("active");
+        cardDiv.style.backgroundColor = "";
+    } else {
+        cardDiv.classList.add("active");
+        cardDiv.style.backgroundColor = "blue";
+    }
+}
+
+cardButton.addEventListener("click", changeClass);
+
+// Transistionend
+
+let listMain = document.getElementById("listMain");
+
+function deleteTLi(event) {
+    if (event.target.classList.contains("remove")) {
+        let liFound = event.target.closest("li");
+        liFound.classList.add("fade-out");
+        liFound.addEventListener("transitionend", () => liFound.remove());
+    }
+}
+
+listMain.addEventListener("click", deleteTLi);
+
+// FIlter
+
+let filterButtons = document.getElementById("filterButtons");
+let filterList = document.getElementById("filterList");
+
+function showAll() {
+    for (let item of filterList.children) {
+        item.classList.remove("hidden");
+    }
+}
+
+function showDone() {
+    for (let item of filterList.children) {
+        if (item.dataset.status === "done") {
+            item.classList.remove("hidden");
+        } else {
+            item.classList.add("hidden");
+        }
+    }
+}
+function showActive() {
+    for (let item of filterList.children) {
+        if (item.dataset.status === "active") {
+            item.classList.remove("hidden");
+        } else {
+            item.classList.add("hidden");
+        }
+    }
+}
+
+function filterClicks(event) {
+    if (event.target.tagName !== "BUTTON") return;
+    if (event.target.innerText === "All") {
+        showAll();
+    } else if (event.target.innerText === "Active") {
+        showActive();
+    } else if (event.target.innerText === "Done") {
+        showDone();
+    }
+}
+filterButtons.addEventListener("click", filterClicks);
