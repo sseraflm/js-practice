@@ -52,12 +52,44 @@
             </li>
         </ul>
         <input type="text" id="liInput" />
-        <button id="newLi">Click me!</button>
+        <button id="newLi">Click me!</button><br />
         <!-- Keydown -->
-        <input type="text" id="keydown" />
+        <input type="text" id="keydown" /> <br />
         <!--Mouse move-->
         <div id="mouseMove"></div>
         <p id="currentCords"></p>
+        <br />
+        <!--Class inline-->
+        <button id="cardButton">Here</button>
+        <div id="card"></div>
+        <!--Transitionend-->
+        <ul id="listMain">
+            <li>
+                <p>Chando</p>
+                <button class="remove">Remove</button>
+            </li>
+            <li>
+                <p>Lugosi</p>
+                <button class="remove">Remove</button>
+            </li>
+            <li>
+                <p>Ibara</p>
+                <button class="remove">Remove</button>
+            </li>
+        </ul>
+        <!--Filter-->
+        <div id="filterButtons">
+            <button>All</button>
+            <button>Active</button>
+            <button>Done</button>
+        </div>
+        <ul id="filterList">
+            <li data-status="active" class="hidden">Buying eggs</li>
+            <li data-status="done" class="hidden">Buy eggs</li>
+            <li data-status="active" class="hidden">Yes</li>
+            <li data-status="Done" class="hidden">No</li>
+        </ul>
         <script src="script.js"></script>
     </body>
 </html>
+
