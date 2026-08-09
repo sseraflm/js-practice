@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1 id="header">this is an header.</h1>
+        <button id="button">Click here!</button> <br />
+        <p id="paragraph">Ado is a great musician.</p>
+        <button id="button2">Click me!</button>
+        <button id="darkMode">Dark mode!</button>
+        <p id="clickCount"></p>
+        <button id="clickButton">Count your clicks with me!</button>
+        <button id="changingButton" class="inactive">Inactive</button> <br />
+        <form id="form">
+            <input type="text" id="name" /> <br />
+            <button id="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+        <a href="https://en.wikipedia.org/wiki/Ado_(singer)" id="link">Adolink</a>
+        <input type="checkbox" id="allowNav" />
+        <label for="allowNav">Allow nav.</label>
+        <div id="contextmenu">
+            <p id="basicText">Adocado</p>
+        </div>
+        <!-- Bubbling -->
+        <div id="outerDiv">
+            <div id="innerDiv">
+                <button id="innerButton">Click</button>
+            </div>
+        </div>
+        <!-- Event Delegation-->
+        <ul id="mainList">
+            <li>
+                <p>Chando</p>
+                <button class="delete">Delete</button>
+            </li>
+            <li>
+                <p>Akuhuri</p>
+                <button class="delete">Delete</button>
+            </li>
+            <li>
+                <p>Ado</p>
+                <button class="delete">Delete</button>
+            </li>
+            <li>
+                <p>Merry</p>
+                <button class="delete">Delete</button>
+            </li>
+        </ul>
+        <input type="text" id="liInput" />
+        <button id="newLi">Click me!</button><br />
+        <!-- Keydown -->
+        <input type="text" id="keydown" /> <br />
+        <!--Mouse move-->
+        <div id="mouseMove"></div>
+        <p id="currentCords"></p>
+        <br />
+        <!--Class inline-->
+        <button id="cardButton">Here</button>
+        <div id="card"></div>
+        <!--Transitionend-->
+        <ul id="listMain">
+            <li>
+                <p>Chando</p>
+                <button class="remove">Remove</button>
+            </li>
+            <li>
+                <p>Lugosi</p>
+                <button class="remove">Remove</button>
+            </li>
+            <li>
+                <p>Ibara</p>
+                <button class="remove">Remove</button>
+            </li>
+        </ul>
+        <!--Filter-->
+        <div id="filterButtons">
+            <button>All</button>
+            <button>Active</button>
+            <button>Done</button>
+        </div>
+        <ul id="filterList">
+            <li data-status="active" class="hidden">Buying eggs</li>
+            <li data-status="done" class="hidden">Buy eggs</li>
+            <li data-status="active" class="hidden">Yes</li>
+            <li data-status="Done" class="hidden">No</li>
+        </ul>
+        <script src="script.js"></script>
+    </body>
+</html>
+

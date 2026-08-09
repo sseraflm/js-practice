@@ -1,0 +1,27 @@
+.hidden {
+    display: none;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+#outerDiv {
+    background-color: gray;
+}
+#mouseMove {
+    height: 360px;
+    background-color: darkblue;
+    width: 360px;
+}
+.active {
+    height: 360px;
+    width: 360px;
+}
+.fade-out {
+    opacity: 0;
+    transition: 0.5s;
+}
+.hidden {
+    display: none;
+}
