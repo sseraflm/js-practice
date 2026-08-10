@@ -435,3 +435,53 @@ The `submit` event is used to handle forms without reloading the page.
 The `contextmenu` event can be used to customize the right-click behavior.
 
 Default can also be controlled by using `if` statements.
+
+### Event bubbling
+
+Event bubbling means that an event starts at the element that was clicked.
+
+`event.target` refers to the element that originally triggered the event.
+
+`event.currentTarget` refers to the element whose event listener is currently handling the event.
+
+`stopPropagation()` can be used to stop from propagating to parent elements.
+
+### Event delegation
+
+Event delegation allows us to use one event listener on a parent element to handle events from its children.
+
+We can also use `event.target` here to determine which child element triggered the event.
+
+`closest()` can be used to find the nearest parent element matching a selector.
+
+### Keyboard events
+
+The `keydown` event runs when a key is pressed.
+
+`event.key` tells us which key was pressed.
+
+It can be used to create keyboard shortcuts.
+
+### Promises
+
+Promises are used to handle operations that finish in the future.
+
+A Promise can be in three states
+
+`pending` While the operation is still running.
+
+`fulfilled` When the operation finished successfully.
+
+`rejected` When the operation Failed.
+
+A promise can be created using the `Promise` constructor.
+
+It receives a function with two parameters: `resolve` and `reject`
+
+`resolve()` is used when the operation finishes successfully
+
+`reject()` is used when the operation fails.
+
+The result of a successfull Promise can be handled with `.then()`
+
+If the promise is rejected the error can be handled with `.catch()`
