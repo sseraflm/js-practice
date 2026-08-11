@@ -64,3 +64,80 @@ let promiseFail = new Promise(function (resolve, reject) {
 });
 
 promiseFail.catch(result => alert(result));
+
+// Three-step Promise
+
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        resolve(1);
+    }, 1000);
+})
+    .then(function (result) {
+        return result * 2;
+    })
+    .then(function (result) {
+        return result * 2;
+    })
+    .then(function (result) {
+        return result * 2;
+    });
+
+// User -> Profile -> Data
+
+let user = {
+    id: 1,
+    username: "sserafim",
+};
+function getUser() {}
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        resolve(user);
+    }, 1000);
+})
+    .then(function (result) {
+        return result.id;
+    })
+    .then(function (result) {
+        alert(`User id is: ${result}`);
+    });
+
+// Chain with error
+
+let errorPromise = new Promise(function (resolve) {
+    setTimeout(() => {
+        resolve("Truth");
+    }, 1000);
+})
+    .then(function (result) {
+        throw new Error("Lie");
+    })
+    .catch(alert);
+
+// Delayed messages
+
+let delayPromise = new Promise(function (resolve) {
+    setTimeout(() => {
+        resolve("First one");
+    }, 1000);
+})
+    .then(function (result) {
+        alert(result);
+
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Second one");
+            }, 1200);
+        });
+    })
+    .then(function (result) {
+        alert(result);
+
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Third one");
+            }, 500);
+        });
+    })
+    .then(function (result) {
+        alert(result);
+    });
