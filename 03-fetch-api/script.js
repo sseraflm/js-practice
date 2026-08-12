@@ -141,3 +141,83 @@ let delayPromise = new Promise(function (resolve) {
     .then(function (result) {
         alert(result);
     });
+
+async function displayMessenges() {
+    let delayPromise = new Promise(function (resolve) {
+        setTimeout(() => {
+            resolve("First one");
+        }, 1000);
+    });
+
+    let firstOne = await delayPromise;
+
+    alert(firstOne);
+    let secondPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Second one");
+        }, 1200);
+    });
+
+    let secondOne = await secondPromise;
+
+    alert(secondOne);
+
+    let thirdPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Third one");
+        }, 1200);
+    });
+
+    let thirdOne = await thirdPromise;
+    alert(thirdOne);
+}
+
+// Async caluclator
+
+async function calculate() {
+    let additionPromise = new Promise(function (resolve) {
+        setTimeout(() => {
+            resolve(10 + 5);
+        }, 500);
+    });
+    let additionResult = await additionPromise;
+
+    let multiplyPromise = new Promise(function (resolve) {
+        setTimeout(() => {
+            resolve(additionResult * 2);
+        }, 500);
+    });
+    let multiplyResult = await multiplyPromise;
+
+    let subtractionPromise = new Promise(function (resolve) {
+        setTimeout(() => {
+            resolve(multiplyResult - 10);
+        }, 500);
+    });
+    let subtractionResult = await subtractionPromise;
+
+    let divisionPromise = new Promise(function (resolve) {
+        setTimeout(() => {
+            resolve(subtractionResult / 10);
+        }, 500);
+    });
+    let divisionResult = await divisionPromise;
+
+    alert(divisionResult);
+}
+
+// Async error handling
+
+async function errorHandle() {
+    try {
+        let rejectPromise = new Promise(function (reject) {
+            setTimeout(() => {
+                reject("This is an error.");
+            }, 1000);
+        });
+
+        await rejectPromise;
+    } catch (error) {
+        alert(error);
+    }
+}
