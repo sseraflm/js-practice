@@ -485,3 +485,30 @@ It receives a function with two parameters: `resolve` and `reject`
 The result of a successfull Promise can be handled with `.then()`
 
 If the promise is rejected the error can be handled with `.catch()`
+
+### Promise Chaining
+
+We can chain promises when we want to perform multiple operations one after another.
+
+A `.then()` can return a value, which will be passed to the next `.then()`.
+
+Example
+
+```javascript
+let promise = new Promise(function (resolve) {
+    resolve(2);
+})
+    .then(function (result) {
+        return result * 2;
+    })
+    .then(function (result) {
+        return result * 2;
+    })
+    .then(function (result) {
+        console.log(result); // 8
+    });
+```
+
+The result returned from one `.then()` becomes the result in the next `.then()`
+
+A `.then()` can also return another Promise. The next `.then` will wait for that promise to finish before executing.
