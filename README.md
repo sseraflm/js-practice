@@ -512,3 +512,11 @@ let promise = new Promise(function (resolve) {
 The result returned from one `.then()` becomes the result in the next `.then()`
 
 A `.then()` can also return another Promise. The next `.then` will wait for that promise to finish before executing.
+
+### Async / Await
+
+`async` and `await` are used to work with Promises in a simpler and more readable way.
+
+An `async` function always returns a Promise.
+
+`await` waits for a Promise to finish and gives back its resolved value. It can only be used inside an `async` function.
