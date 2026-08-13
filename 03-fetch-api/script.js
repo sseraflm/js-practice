@@ -221,3 +221,63 @@ async function errorHandle() {
         alert(error);
     }
 }
+
+// JSON
+
+let userObject = [
+    {
+        name: "sserafim",
+        age: 444,
+    },
+    {
+        name: "Tokyo",
+        age: 222,
+    },
+];
+
+let json = JSON.stringify(userObject);
+
+alert(json);
+
+let objectAgain = JSON.parse(json);
+
+Fetch
+
+let objectList = document.getElementById("objectList");
+function createLi(object) {
+    let userLi = document.createElement("li");
+
+    let idP = document.createElement("p");
+    idP.innerText = object.id;
+
+    let nameP = document.createElement("p");
+    nameP.innerText = object.name;
+
+    let usernameP = document.createElement("p");
+    usernameP.innerText = object.username;
+
+    userLi.append(idP, nameP, usernameP);
+
+    objectList.append(userLi);
+}
+async function fetchUsers() {
+    let url = "https://jsonplaceholder.typicode.com/users";
+
+    let response = await fetch(url);
+    if (response.ok) {
+        let users = await response.json();
+
+        console.log(users[4].name);
+
+        let foundUser = users.find(user => user.id === 3);
+        console.log(foundUser.name);
+
+        for (let user of users) {
+            createLi(user);
+        }
+    } else {
+        alert("HTTP-Error: " + response.status);
+    }
+}
+
+fetchUsers();
