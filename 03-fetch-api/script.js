@@ -241,7 +241,7 @@ alert(json);
 
 let objectAgain = JSON.parse(json);
 
-Fetch
+// Fetch
 
 let objectList = document.getElementById("objectList");
 function createLi(object) {
