@@ -520,3 +520,9 @@ A `.then()` can also return another Promise. The next `.then` will wait for that
 An `async` function always returns a Promise.
 
 `await` waits for a Promise to finish and gives back its resolved value. It can only be used inside an `async` function.
+
+### Fetch
+
+The `fetch()` function is used to make HTTP requests and retrieve data from APIs.
+
+It returns a Promise, so it can be used with `.then()` / `.catch()` or with `async` / `await`
