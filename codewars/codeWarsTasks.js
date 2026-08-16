@@ -29,19 +29,15 @@ function basicOp(operation, value1, value2) {
   switch (operation) {
     case "+":
       return value1 + value2;
-      break;
 
     case "-":
       return value1 - value2;
-      break;
 
     case "*":
       return value1 * value2;
-      break;
 
     case "/":
       return value1 / value2;
-      break;
   }
 
   return 0;
@@ -56,7 +52,7 @@ function opposite(number) {
   }
 }
 // Simpler solution
-function opposite(number) {
+function simplerOpposite(number) {
   return -number;
 }
 
@@ -97,12 +93,12 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   }
 };
 // Function 1 – hello world
-function greet() {
+function greet1() {
   return "hello world!";
 }
 
 // Returning Strings
-function greet(name) {
+function greet2(name) {
   return "Hello, " + name + " how are you doing today?";
 }
 

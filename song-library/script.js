@@ -1,8 +1,8 @@
-let songCards = document.getElementById("songCards");
-let favoriteSongCards = document.getElementById("favoriteSongCards");
+const songCards = document.getElementById("songCards");
+const favoriteSongCards = document.getElementById("favoriteSongCards");
 
-let songsCount = document.getElementById("songsCount");
-let songs = [
+const songsCount = document.getElementById("songsCount");
+const songs = [
     {
         title: "Shoka",
         artist: "Ado",
@@ -36,19 +36,19 @@ let songs = [
 ];
 
 function createSongCard(song) {
-    let songCard = document.createElement("div");
+    const songCard = document.createElement("div");
     songCard.className = "song-card";
 
-    let songTitle = document.createElement("h2");
+    const songTitle = document.createElement("h2");
     songTitle.innerText = `Title: ${song.title}`;
 
-    let songArtist = document.createElement("p");
+    const songArtist = document.createElement("p");
     songArtist.innerText = `Artist: ${song.artist}`;
 
-    let songRelease = document.createElement("p");
+    const songRelease = document.createElement("p");
     songRelease.innerText = `Release year: ${song.releaseYear}`;
 
-    let isFavorite = document.createElement("p");
+    const isFavorite = document.createElement("p");
     if (song.isFavorite) {
         isFavorite.innerText = "Favorite: Yes";
     } else {
@@ -66,8 +66,8 @@ function renderSongs(songsArray, container) {
         console.log("Empty.");
         return;
     }
-    for (let song of songsArray) {
-        let card = createSongCard(song);
+    for (const song of songsArray) {
+        const card = createSongCard(song);
         container.append(card);
     }
 }
@@ -76,13 +76,13 @@ function updateSongsCount(songsArray) {
 }
 
 function getFavoriteSongs(songsArray) {
-    let favoriteSongs = songsArray.filter(song => song.isFavorite);
+    const favoriteSongs = songsArray.filter(song => song.isFavorite);
     return favoriteSongs;
 }
 
 renderSongs(songs, songCards);
 updateSongsCount(songs);
 
-let favoriteSongs = getFavoriteSongs(songs);
+const favoriteSongs = getFavoriteSongs(songs);
 
 renderSongs(favoriteSongs, favoriteSongCards);

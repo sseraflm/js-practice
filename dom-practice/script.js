@@ -1,10 +1,10 @@
-let header = document.querySelector("h1");
-let name1 = document.getElementById("name1");
-let name2 = document.getElementById("name2");
+const header = document.querySelector("h1");
+const name1 = document.getElementById("name1");
+const name2 = document.getElementById("name2");
 
-let song = document.querySelector(".song");
-let songsList = document.getElementsByClassName("song");
-let button = document.getElementById("button1");
+const song = document.querySelector(".song");
+const songsList = document.getElementsByClassName("song");
+const button = document.getElementById("button1");
 
 console.log(header);
 console.log(name1);
@@ -16,25 +16,25 @@ header.innerText = "Chando";
 
 name2.innerText = "Miko";
 
-for (let song of songsList) {
+for (const song of songsList) {
     console.log(song.textContent);
 }
 
 songsList[2].innerText = "soldier game";
 button.innerText = "Japan's national football team.";
 
-let input = document.getElementById("adoInput");
+const input = document.getElementById("adoInput");
 input.value = "Soldier";
 console.log(input.value);
 
-let link = document.querySelector("a");
+const link = document.querySelector("a");
 
 console.log(link.href);
 
 link.href = "ado.ado";
 link.textContent = "yes";
 
-let img = document.querySelector("img");
+const img = document.querySelector("img");
 
 img.alt = "egg2";
 
@@ -49,7 +49,7 @@ console.log(link.getAttribute("Chando")); // null
 console.log(link.className);
 link.className = "ye";
 
-let header2 = document.getElementById("title");
+const header2 = document.getElementById("title");
 
 console.log(header2.dataset.userId);
 
@@ -58,9 +58,9 @@ console.log(header2.dataset.userId);
 
 // Modify practice.
 
-let list = document.getElementById("list");
+const list = document.getElementById("list");
 
-let listElement = document.createElement("li");
+const listElement = document.createElement("li");
 
 listElement.innerHTML = "Vivarium";
 
@@ -68,10 +68,10 @@ listElement.className = "Adocado";
 
 list.append(listElement);
 
-let songs = ["Shoka", "Vivarium", "MIRROR", "Do the dance!"];
+const songs = ["Shoka", "Vivarium", "MIRROR", "Do the dance!"];
 
-for (let song of songs) {
-    let listItem = document.createElement("li");
+for (const song of songs) {
+    const listItem = document.createElement("li");
     listItem.innerText = song;
     list.append(listItem);
 }

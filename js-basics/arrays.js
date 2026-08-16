@@ -1,4 +1,4 @@
-let songs = ["Shoka", "Vivarium", "MIRROR", "Dried Flowers"];
+const songs = ["Shoka", "Vivarium", "MIRROR", "Dried Flowers"];
 
 console.log(songs[0]);
 console.log(songs[2]);
@@ -14,7 +14,7 @@ console.log(songs.pop());
 console.log(songs);
 
 function displaySongs(songs) {
-    for (let song of songs) {
+    for (const song of songs) {
         console.log(song);
     }
 }
@@ -37,9 +37,9 @@ console.log(removedSong);
 
 // Array methods
 
-let numbers = [4, 7, 10, 13, 18, 21];
+const numbers = [4, 7, 10, 13, 18, 21];
 
-let doubled = numbers.map(number => number * 2);
+const doubled = numbers.map(number => number * 2);
 console.log(doubled);
 
 const evenNumbers = numbers.filter(number => number % 2 === 0);
@@ -68,11 +68,11 @@ console.log(atleastTen);
 
 // Reduce
 
-let sumOfNumbers = numbers.reduce((sum, current) => sum + current, 0);
+const sumOfNumbers = numbers.reduce((sum, current) => sum + current, 0);
 console.log(sumOfNumbers);
 
-let productOfNumbers = numbers.reduce((product, current) => product * current, 1);
+const productOfNumbers = numbers.reduce((product, current) => product * current, 1);
 console.log(productOfNumbers);
 
-let songsCharacters = songs.reduce((sum, current) => sum + current.length, 0);
+const songsCharacters = songs.reduce((sum, current) => sum + current.length, 0);
 console.log(songsCharacters);

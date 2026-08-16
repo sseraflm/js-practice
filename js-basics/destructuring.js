@@ -1,11 +1,11 @@
 // Array destructuring.
 const favoriteSongs = ["Shoka", "Show", "MIRROR"];
 
-let [song1, song2, song3, song4 = "Unknown"] = favoriteSongs;
+const [song1, song2, song3, song4 = "Unknown"] = favoriteSongs;
 
 console.log(song1, song2, song3, song4);
 
-let [song5, , song7] = favoriteSongs;
+const [song5, , song7] = favoriteSongs;
 
 console.log(song5, song7);
 
@@ -17,11 +17,11 @@ const user = {
     country: "Poland",
 };
 
-let { username, age } = user;
+const { username, age } = user;
 
 console.log(username, age);
 
-let { username: ssera, isStudent = true } = user;
+const { username: ssera, isStudent = true } = user;
 
 console.log(ssera, isStudent);
 

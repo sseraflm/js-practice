@@ -1,6 +1,6 @@
 // Change header
-let button = document.getElementById("button");
-let header = document.getElementById("header");
+const button = document.getElementById("button");
+const header = document.getElementById("header");
 
 function changeHeader() {
     header.innerText = "Ado is an Utaite.";
@@ -10,8 +10,8 @@ button.addEventListener("click", changeHeader);
 
 // Hide Text
 
-let button2 = document.getElementById("button2");
-let paragraph = document.getElementById("paragraph");
+const button2 = document.getElementById("button2");
+const paragraph = document.getElementById("paragraph");
 
 function hideText() {
     paragraph.classList.toggle("hidden");
@@ -21,8 +21,8 @@ button2.addEventListener("click", hideText);
 
 // dark mode
 
-let darkModeButton = document.getElementById("darkMode");
-let body = document.querySelector("body");
+const darkModeButton = document.getElementById("darkMode");
+const body = document.querySelector("body");
 
 function darkMode() {
     body.classList.toggle("dark");
@@ -32,8 +32,8 @@ darkModeButton.addEventListener("click", darkMode);
 
 // Clicks count
 
-let clickCount = document.getElementById("clickCount");
-let clickButton = document.getElementById("clickButton");
+const clickCount = document.getElementById("clickCount");
+const clickButton = document.getElementById("clickButton");
 
 let count = 0;
 function countClicks() {
@@ -44,7 +44,7 @@ clickButton.addEventListener("click", countClicks);
 
 // Button that changes itself
 
-let changingButton = document.getElementById("changingButton");
+const changingButton = document.getElementById("changingButton");
 
 function changeButton() {
     if (changingButton.classList.contains("inactive")) {
@@ -62,18 +62,18 @@ changingButton.addEventListener("click", changeButton);
 
 // Form
 
-let form = document.getElementById("form");
-let result = document.getElementById("result");
+const form = document.getElementById("form");
+const result = document.getElementById("result");
 
 function stopEvent(event) {
     event.preventDefault();
-    let nameInput = document.getElementById("name");
+    const nameInput = document.getElementById("name");
     if (nameInput.value === "") {
-        let noResult = document.createElement("p");
+        const noResult = document.createElement("p");
         noResult.innerText = "No text in input.";
         result.append(noResult);
     } else {
-        let resultP = document.createElement("p");
+        const resultP = document.createElement("p");
         resultP.innerText = nameInput.value;
         result.append(resultP);
     }
@@ -83,8 +83,8 @@ form.addEventListener("submit", stopEvent);
 
 // Stop Links
 
-let link = document.getElementById("link");
-let checkbox = document.getElementById("allowNav");
+const link = document.getElementById("link");
+const checkbox = document.getElementById("allowNav");
 
 function stopLink(event) {
     if (!checkbox.checked) {
@@ -96,7 +96,7 @@ link.addEventListener("click", stopLink);
 
 // Context menu
 
-let basicText = document.getElementById("basicText");
+const basicText = document.getElementById("basicText");
 
 function stopMenu(event) {
     event.preventDefault();
@@ -107,7 +107,7 @@ basicText.addEventListener("contextmenu", stopMenu);
 
 // Bubbling
 
-let outerDiv = document.getElementById("outerDiv");
+const outerDiv = document.getElementById("outerDiv");
 
 function bubblingAlert(event) {
     console.log(event.target);
@@ -118,20 +118,20 @@ outerDiv.addEventListener("click", bubblingAlert);
 
 // Delegation
 
-let mainList = document.getElementById("mainList");
-let newLiButton = document.getElementById("newLi");
-let liInput = document.getElementById("liInput");
+const mainList = document.getElementById("mainList");
+const newLiButton = document.getElementById("newLi");
+const liInput = document.getElementById("liInput");
 
 function deleteLi(event) {
     if (event.target.classList.contains("delete")) {
-        let foundLi = event.target.closest("li");
+        const foundLi = event.target.closest("li");
         foundLi.remove();
     }
 }
 function newLi() {
-    let newLi = document.createElement("li");
-    let newP = document.createElement("p");
-    let deleteButton = document.createElement("button");
+    const newLi = document.createElement("li");
+    const newP = document.createElement("p");
+    const deleteButton = document.createElement("button");
     deleteButton.classList.add("delete");
     deleteButton.innerText = "Delete";
     newP.innerText = liInput.value;
@@ -146,7 +146,7 @@ newLiButton.addEventListener("click", newLi);
 
 // Keydown
 
-let keyInput = document.getElementById("keydown");
+const keyInput = document.getElementById("keydown");
 
 function clearInput(event) {
     if (event.key === "Escape") {
@@ -161,12 +161,12 @@ keyInput.addEventListener("keydown", clearInput);
 
 // Mouse move
 
-let mouseMoveDiv = document.getElementById("mouseMove");
-let currentCordsP = document.getElementById("currentCords");
+const mouseMoveDiv = document.getElementById("mouseMove");
+const currentCordsP = document.getElementById("currentCords");
 
 function showCords(event) {
-    let xCord = event.clientX;
-    let yCord = event.clientY;
+    const xCord = event.clientX;
+    const yCord = event.clientY;
     currentCordsP.innerText = `X: ${xCord}, Y: ${yCord}`;
 }
 
@@ -174,8 +174,8 @@ mouseMoveDiv.addEventListener("mousemove", showCords);
 
 // Class inline
 
-let cardButton = document.getElementById("cardButton");
-let cardDiv = document.getElementById("card");
+const cardButton = document.getElementById("cardButton");
+const cardDiv = document.getElementById("card");
 
 function changeClass() {
     if (cardDiv.classList.contains("active")) {
@@ -191,11 +191,11 @@ cardButton.addEventListener("click", changeClass);
 
 // Transistionend
 
-let listMain = document.getElementById("listMain");
+const listMain = document.getElementById("listMain");
 
 function deleteTLi(event) {
     if (event.target.classList.contains("remove")) {
-        let liFound = event.target.closest("li");
+        const liFound = event.target.closest("li");
         liFound.classList.add("fade-out");
         liFound.addEventListener("transitionend", () => liFound.remove());
     }
@@ -205,17 +205,17 @@ listMain.addEventListener("click", deleteTLi);
 
 // FIlter
 
-let filterButtons = document.getElementById("filterButtons");
-let filterList = document.getElementById("filterList");
+const filterButtons = document.getElementById("filterButtons");
+const filterList = document.getElementById("filterList");
 
 function showAll() {
-    for (let item of filterList.children) {
+    for (const item of filterList.children) {
         item.classList.remove("hidden");
     }
 }
 
 function showDone() {
-    for (let item of filterList.children) {
+    for (const item of filterList.children) {
         if (item.dataset.status === "done") {
             item.classList.remove("hidden");
         } else {
@@ -224,7 +224,7 @@ function showDone() {
     }
 }
 function showActive() {
-    for (let item of filterList.children) {
+    for (const item of filterList.children) {
         if (item.dataset.status === "active") {
             item.classList.remove("hidden");
         } else {

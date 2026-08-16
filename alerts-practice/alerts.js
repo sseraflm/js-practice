@@ -1,6 +1,5 @@
 "use strict";
 
-let JSAlert;
-JSAlert = "An javascript alert has appeared!";
+const JSAlert = "An javascript alert has appeared!";
 
 alert(JSAlert);
