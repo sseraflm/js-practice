@@ -101,3 +101,73 @@ function createUserElements(userObject) {
 saveUserButton.addEventListener("click", saveUser);
 
 loadUserButton.addEventListener("click", loadUser);
+
+// counter
+
+const counterP = document.getElementById("counter");
+const addOneButton = document.getElementById("addOne");
+let counter = 0;
+
+function loadCounter() {
+    const counterNumber = localStorage.getItem("number");
+    if (counterNumber === null) {
+        counterP.innerText = counter;
+    } else {
+        counter = Number(counterNumber);
+        counterP.innerText = counter;
+    }
+}
+
+function addCounter() {
+    counter++;
+    counterP.innerText = counter;
+    localStorage.setItem("number", counter);
+}
+
+loadCounter();
+
+addOneButton.addEventListener("click", addCounter);
+
+// list
+
+const cityName = document.getElementById("city");
+const cityAddButton = document.getElementById("cityAdd");
+const cityContainer = document.getElementById("container");
+let cities = [];
+
+function addItem() {
+    if (cityName.value.trim() === "") {
+        return;
+    }
+    cities.unshift(cityName.value);
+    if (cities.length > 5) {
+        cities.pop();
+    }
+    const cityNames = JSON.stringify(cities);
+    localStorage.setItem("cities", cityNames);
+    loadItems();
+}
+function loadItems() {
+    const citiesJSON = localStorage.getItem("cities");
+    if (citiesJSON === null) {
+        return;
+    }
+    const savedCities = JSON.parse(citiesJSON);
+    cities = savedCities;
+    cityContainer.innerText = "";
+    cities.forEach(city => {
+        createItemElement(city);
+    });
+}
+function createItemElement(city) {
+    const cityElementLi = document.createElement("li");
+    const cityElementP = document.createElement("p");
+
+    cityElementP.innerText = city;
+    cityElementLi.append(cityElementP);
+    cityContainer.append(cityElementLi);
+}
+
+loadItems();
+
+cityAddButton.addEventListener("click", addItem);
