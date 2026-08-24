@@ -526,3 +526,25 @@ An `async` function always returns a Promise.
 The `fetch()` function is used to make HTTP requests and retrieve data from APIs.
 
 It returns a Promise, so it can be used with `.then()` / `.catch()` or with `async` / `await`
+
+### LocalStorage
+
+`localstorage` allows storing data in the browser.
+
+Data stored in LocalStorage remains available even after the page is refreshed or the browser is closed.
+
+`setItem()` is used to save the data.
+
+`getItem()` is used to retrive saved data.
+
+`removeItem()` removes a specific item from LocalStorage.
+
+`clear()` removes all data stored in LocalStorage.
+
+LocalStorage stores values as strings, so objects and arrays need to be converted to JSON before storing them.
+
+`JSON.stringify()` converts an object or array into a JSON string.
+
+`JSON.parse()` converts a json string back into a JavaScript object or array.
+
+There is also `sessionStorage` which works similary to LocalStorage, though its data is removed when the browser session ends.
