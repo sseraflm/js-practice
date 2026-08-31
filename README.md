@@ -548,3 +548,50 @@ LocalStorage stores values as strings, so objects and arrays need to be converte
 `JSON.parse()` converts a json string back into a JavaScript object or array.
 
 There is also `sessionStorage` which works similary to LocalStorage, though its data is removed when the browser session ends.
+
+### Basic class syntax.
+
+Classes are used as a blueprint to create multiple objects with the same structure and behavior.
+
+A class can have a `constructor`, which runs automatically when a new object is created using `new`. Regular methods are added to the class body and shared by all instances.
+
+```javascript
+class Book {
+    constructor(title, releaseYear) {
+        this.title = title;
+        this.releaseYear = releaseYear;
+    }
+
+    getBookInformation() {
+        return `Book title: ${this.title}, Book release year: ${this.releaseYear}`;
+    }
+}
+```
+
+### Getters and setters
+
+Getters and setters allow controlled access to a property. A setter can validate a value before storing it, a getter can return it.
+
+### Inheritance
+
+`extends` allows a class to inherit from another class. and `super.methodName()` calls the parent's version of a method.
+
+### Static properties and methods
+
+`static` members belong to the class itself, not to individual instances. They are often used for shared counters or factory methods.
+
+### Private fields
+
+Fields declared with `#` can only be accessed from inside the class.
+
+### Modules
+
+Modules allow code to be split across mutiple files using `export` and `import`.
+
+```javascript
+// book.js
+    export { Book }
+
+// main.js
+    import { Book } from "./book.js";
+```
