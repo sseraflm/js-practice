@@ -151,3 +151,38 @@ function enough(cap, on, wait) {
     return 0;
   }
 }
+
+// Understanding closures - the basics
+
+function buildFun(n) {
+  let res = [];
+  for (let i = 0; i < n; i++) {
+    res.push(function () {
+      return i;
+    });
+  }
+  return res;
+}
+
+// Closure Counter
+
+function counter() {
+  let count = 0;
+
+  return function newCounter() {
+    return ++count;
+  };
+}
+
+// You Can't Code Under Pressure #2
+
+function Counter() {
+  let count = 0;
+  //quickly, now!
+  this.check = function () {
+    return count;
+  };
+  this.increment = function () {
+    return ++count;
+  };
+}
