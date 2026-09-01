@@ -36,3 +36,16 @@ function memoize(fn) {
     return cache[arg];
   };
 }
+
+// var task
+
+// No Error
+x = 5;
+console.log(x);
+var x;
+
+// Error
+
+y = 5;
+console.log(y);
+let y;
