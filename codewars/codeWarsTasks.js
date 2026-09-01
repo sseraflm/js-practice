@@ -186,3 +186,31 @@ function Counter() {
     return ++count;
   };
 }
+
+// Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+
+function countDevelopers(list) {
+  // your awesome code here :)
+  const filteredList = list.filter(
+    (item) => item.continent === "Europe" && item.language === "JavaScript",
+  );
+  return filteredList.length;
+}
+
+// Lazily executing a function
+
+function makeLazy(fn, ...arg) {
+  return function () {
+    return fn(...arg);
+  };
+}
+
+// Javascript Mathematician
+
+function calculate(...firstArg) {
+  return function (...secondArg) {
+    const sum1 = firstArg.reduce((a, b) => a + b, 0);
+    const sum2 = secondArg.reduce((a, b) => a + b, 0);
+    return sum1 + sum2;
+  };
+}
