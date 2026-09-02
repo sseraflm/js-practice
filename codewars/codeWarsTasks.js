@@ -214,3 +214,22 @@ function calculate(...firstArg) {
     return sum1 + sum2;
   };
 }
+
+// Coding Meetup #2 - Higher-Order Functions Series - Greet developers
+
+function greetDevelopers(list) {
+  // thank you for checking out my kata :)
+  return list.map((dev) => {
+    return {
+      ...dev,
+      greeting: `Hi ${dev.firstName}, what do you like the most about ${dev.language}?`,
+    };
+  });
+}
+
+// Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+
+function isRubyComing(list) {
+  // thank you for checking out my kata :)
+  return list.some((dev) => dev.language === "Ruby");
+}
