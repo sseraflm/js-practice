@@ -124,3 +124,15 @@ setTimeout(() => {
 setTimeout(() => {
   debouncedLog("3");
 }, 600);
+
+// event loop
+
+console.log("A")
+
+setTimeout(() => {
+  console.log("B")
+}, 0);
+
+Promise.resolve().then(() => console.log("C"))
+
+console.log("D")
