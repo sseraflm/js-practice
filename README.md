@@ -130,7 +130,7 @@ it works like this.
 let adoFan = confirm("Are you ado's fan?");
 
 if (adoFan) {
-    alert("You are an ado fan!");
+  alert("You are an ado fan!");
 }
 ```
 
@@ -142,9 +142,9 @@ this is how it would look added to an if.
 let adoFan = confirm("Are you Ado's fan?");
 
 if (adoFan) {
-    alert("You are Ado's fan!");
+  alert("You are Ado's fan!");
 } else {
-    alert("Go listen to some Ado then.");
+  alert("Go listen to some Ado then.");
 }
 ```
 
@@ -174,8 +174,8 @@ Here is an example.
 let ado = 0;
 
 while (ado < 5) {
-    console.log(ado);
-    ado++;
+  console.log(ado);
+  ado++;
 }
 ```
 
@@ -185,8 +185,8 @@ while (ado < 5) {
 let ado = 0;
 
 do {
-    console.log(ado);
-    ado++;
+  console.log(ado);
+  ado++;
 } while (ado < 5);
 ```
 
@@ -198,7 +198,7 @@ It works like this.
 
 ```javascript
 for (let ado = 0; ado < 22; ado++) {
-    console.log(ado);
+  console.log(ado);
 }
 ```
 
@@ -224,8 +224,8 @@ An example:
 
 ```javascript
 function welcomeUser(adoName) {
-    let message = "Hello, " + adoName;
-    alert(message);
+  let message = "Hello, " + adoName;
+  alert(message);
 }
 
 welcomeUser("Akhuri-Chan");
@@ -243,7 +243,7 @@ Example:
 
 ```javascript
 function adoSum(a, b) {
-    return a + b;
+  return a + b;
 }
 
 let result = adoSum(2, 2);
@@ -258,11 +258,11 @@ it can be called using the name of the variable.
 
 ```javascript
 const checkTemperature = function (temperature) {
-    if (temperature <= 0) {
-        return "Freezing";
-    } else {
-        return "Above freezing";
-    }
+  if (temperature <= 0) {
+    return "Freezing";
+  } else {
+    return "Above freezing";
+  }
 };
 
 let result = checkTemperature(5);
@@ -278,7 +278,7 @@ example:
 
 ```javascript
 const add = (a, b) => {
-    return a + b;
+  return a + b;
 };
 ```
 
@@ -308,8 +308,8 @@ Example of an object:
 
 ```javascript
 let ado = {
-    name: "Naima",
-    age: 22,
+  name: "Naima",
+  age: 22,
 };
 ```
 
@@ -325,7 +325,7 @@ It works like this:
 
 ```javascript
 for (const key in object) {
-    // It will execute body for each key in the object.
+  // It will execute body for each key in the object.
 }
 ```
 
@@ -496,17 +496,17 @@ Example
 
 ```javascript
 let promise = new Promise(function (resolve) {
-    resolve(2);
+  resolve(2);
 })
-    .then(function (result) {
-        return result * 2;
-    })
-    .then(function (result) {
-        return result * 2;
-    })
-    .then(function (result) {
-        console.log(result); // 8
-    });
+  .then(function (result) {
+    return result * 2;
+  })
+  .then(function (result) {
+    return result * 2;
+  })
+  .then(function (result) {
+    console.log(result); // 8
+  });
 ```
 
 The result returned from one `.then()` becomes the result in the next `.then()`
@@ -557,14 +557,14 @@ A class can have a `constructor`, which runs automatically when a new object is 
 
 ```javascript
 class Book {
-    constructor(title, releaseYear) {
-        this.title = title;
-        this.releaseYear = releaseYear;
-    }
+  constructor(title, releaseYear) {
+    this.title = title;
+    this.releaseYear = releaseYear;
+  }
 
-    getBookInformation() {
-        return `Book title: ${this.title}, Book release year: ${this.releaseYear}`;
-    }
+  getBookInformation() {
+    return `Book title: ${this.title}, Book release year: ${this.releaseYear}`;
+  }
 }
 ```
 
@@ -590,8 +590,86 @@ Modules allow code to be split across mutiple files using `export` and `import`.
 
 ```javascript
 // book.js
-    export { Book }
+export { Book };
 
 // main.js
-    import { Book } from "./book.js";
+import { Book } from "./book.js";
 ```
+
+### Closures
+
+A closure is a function that remembers the variables from its outer scope and can access them.
+
+### Lexical Environment
+
+A Lexical Environment holds a scope's variables plus a reference to its outer scope.
+
+Looking up a variable means checking the local scope first, then following that reference upward until it's found.
+
+Each code block with `let`/`const` gets its own Lexical Environment, which is why a `for` loop using `let` gives every iteration its own separate variable, unlike `var`.
+
+### Closure counter pattern
+
+An outer function can declare a private variable and return inner functions in the same scope.
+
+Since they share that scope, they all read and modify the same variable, which stays inaccessible from anywhere else.
+
+### Private state through a constructor
+
+The same pattern also works with `this` in a constructor function and private variables and methods share a scope there too, closure-wise it's no different from returning a plain object.
+
+### Hoisting
+
+Hoisting means that declarations are moved to the top of their scope before the code runs.
+
+`var` declarations are hoisted and initialized with `undefined` which means they can be used before the line where they are declared without an error.
+
+```javascript
+console.log(x); // This will result in undefined.
+var x = 5;
+```
+
+`let` and `const` are also hoisted, but they stay in the so called "temporal dead zone" until the line where they are declared.
+
+```javascript
+console.log(y); // This will result in an ReferenceError
+let y = 5;
+```
+
+### var scope
+
+Unlike `let` and `const`, `var` only has either global or function scope.
+
+When a `var` is declared inside any block that is not inside any function it becomes global.
+
+```javascript
+if (true) {
+  var global = "This is an global var.";
+}
+
+console.log(global); // Works since it's in global scope.
+```
+
+If the block is inside a function, the `var` will stay limited only to the function's scope.
+
+### Function Decorators
+
+A decorator is a function that takes another function and returns a new function with extra behavior added around it.
+
+`call()` lets a decorator invoke the wrapped function with the correct `this` and any arguments, so it still works when wrapping object methods.
+
+A timing decorator is a common example, it measures how long the wrapped function takes and logs it, while still returning the original result unchanged.
+
+### Debounce
+
+`debounce` delays a function's execution until a set amout of time has passed without it being called again. Each new call resets the delay.
+
+It is useful for things like search inputs, resizing, or scroll events.
+
+### Event loop
+
+Javascript runs synchronous code first, on the call stack.
+
+Async callbacks go into one of two queues: microtasks (`.then()`) or macrotasks (`setTimeout`, DOM Events).
+
+Once the call stack is empty, the engine fully empties the microtask queue before taking a single task from the macrotask queue.

@@ -151,3 +151,96 @@ function enough(cap, on, wait) {
     return 0;
   }
 }
+
+// Understanding closures - the basics
+
+function buildFun(n) {
+  let res = [];
+  for (let i = 0; i < n; i++) {
+    res.push(function () {
+      return i;
+    });
+  }
+  return res;
+}
+
+// Closure Counter
+
+function counter() {
+  let count = 0;
+
+  return function newCounter() {
+    return ++count;
+  };
+}
+
+// You Can't Code Under Pressure #2
+
+function Counter() {
+  let count = 0;
+  //quickly, now!
+  this.check = function () {
+    return count;
+  };
+  this.increment = function () {
+    return ++count;
+  };
+}
+
+// Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+
+function countDevelopers(list) {
+  // your awesome code here :)
+  const filteredList = list.filter(
+    (item) => item.continent === "Europe" && item.language === "JavaScript",
+  );
+  return filteredList.length;
+}
+
+// Lazily executing a function
+
+function makeLazy(fn, ...arg) {
+  return function () {
+    return fn(...arg);
+  };
+}
+
+// Javascript Mathematician
+
+function calculate(...firstArg) {
+  return function (...secondArg) {
+    const sum1 = firstArg.reduce((a, b) => a + b, 0);
+    const sum2 = secondArg.reduce((a, b) => a + b, 0);
+    return sum1 + sum2;
+  };
+}
+
+// Coding Meetup #2 - Higher-Order Functions Series - Greet developers
+
+function greetDevelopers(list) {
+  // thank you for checking out my kata :)
+  return list.map((dev) => {
+    return {
+      ...dev,
+      greeting: `Hi ${dev.firstName}, what do you like the most about ${dev.language}?`,
+    };
+  });
+}
+
+// Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+
+function isRubyComing(list) {
+  // thank you for checking out my kata :)
+  return list.some((dev) => dev.language === "Ruby");
+}
+
+// Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer
+
+function getFirstPython(list) {
+  // Thank you for checking out my kata :)
+  const pythonDev = list.find((dev) => dev.language === "Python");
+  if (pythonDev) {
+    return `${pythonDev.firstName}, ${pythonDev.country}`;
+  }
+  return "There will be no Python developers";
+}
